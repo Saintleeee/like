@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山火历程</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+		
+		@font-face{
+			font-family:"ziyou";
+			src: url("../font/SourceHanSansOLD-Medium-2.otf");
+		}
+			
+		
+		
+        body{
+            display: flex;
+            justify-content: center;
+       
+background: url( "../imageco/24d40a06ebf143f8aa43df4d9cc46ba4.jpg") no-repeat;
+height:100%;
+width:100%;
+background-size:cover; 
+background-attachment: fixed
+
+        }
+		
+		
+        .wrap{
+            width: 1000px;
+            position: relative;
+            top: 100px;
+        }
+        .wrap::after{
+            content: '';
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            width: 5px;
+            z-index: -999;
+            height: 1350px;
+            background-color: rgba(255,255,255,.5);
+        }
+        .box{
+            position: relative;
+            width:100%;
+            height: 120px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .left,.right{
+			font-family: "ziyou";
+			letter-spacing: 2px;
+            position: relative;
+            width: 100%;
+            height: 140px;
+            border-radius: 15px;
+			
+			line-height: 25px;
+			color:;
+        transition: all 300ms;
+
+            /* background-color: rgba(255,255,255,.5); */
+        margin: 20px;;
+		padding: 20px}
+		
+		.left:hover{ opacity: 0.8z;
+ transform: scale(1.10);
+			
+		}
+		.right:hover{
+		 opacity: 0.8z;
+ transform: scale(1.10);}
+		
+        .box:nth-child(even) .left{
+    background-color: rgba(255,255,255,.4);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    color: rgb(0,0,0);
+        }
+        .box:nth-child(odd) .right{
+            background-color: rgba(255,255,255,.4);
+            box-shadow: 0 0 10px rgba(0,0,0,.3);
+        }
+        .center{
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center>span{
+            width: 100px;
+		
+            border-radius: 10px;
+            text-align:center;
+            font: 900 18px '';
+            line-height: 50px;
+            background-color: rgba(256,256,256,1);
+ --c: #fff;
+ /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    rgb(62, 98, 101);
+ /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+			
+        }
+	.center>span:hover,.center>span:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+		
+button {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  box-shadow: 0 5px 25px rgba(0, 0,0, .25);
+  border: none;
+left:60px;
+ top:30px;
+	position: sticky;
+}
+
+button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgb(210, 54, 42);
+  background:rgb(62, 98, 101);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 17px;
+}
+
+button span:nth-child(2) {
+  background: rgb(210, 54, 42);
+  color: rgb(62, 98, 101);
+  overflow: hidden;
+  z-index: 2;
+  transition: .5s;
+  clip-path: polygon(50% 0%, 100% 0%,100% 100%,50% 100%,50% 53%);
+}
+
+button span:nth-child(2):hover {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%, 0 50%);
+}
+
+button span:nth-child(1):hover ~ span:nth-child(2) {
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%, 100%50%);
+    text-align: right;
+}
+		
+		
+    </style>
+</head>
+<body>
+	<a href="主页菜单.html">
+    <button >
+     <span>返回首页</span>
+     <span>返回首页</span>
+    </button>
+    </a>
+    <div class="wrap">
+        <div class="box">
+            <div class="left" ></div>
+            <div class="center" ><span>
+                8月17日
+            </span></div>
+            <div class="right" >18时28分许、20时30分许，重庆涪陵区荔枝街道所辖的大梁山和江北街道所辖的北山坪<strong style="color: rgb(210, 54, 42)">相继发生火灾 </strong>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="left" >17时40分许，涪陵区江北街道所辖山林山火
+				<strong style="color: rgb(62, 98, 101)">已得到有效控制。</strong> <br/>
+10时26分许、13时37分许，重庆南川区神童镇、三泉镇相继<strong style="color: rgb(210, 54, 42)">发生山火</strong><br>
+傍晚，涪陵区江北街道所辖山林<strong style="color: rgb(210, 54, 42)">山火复燃</strong><br>
+22时许，江津区支坪镇仁龙村发生山火 </div>
+            <div class="center"><span>
+                8月18日
+            </span></div>
+            <div class="right" ></div>
+        </div>
+
+        <div class="box">
+            <div class="left"></div>
+            <div class="center" ><span>
+                8月19日
+            </span></div>
+            <div class="right duan" style="text-align: center">重庆涪陵北山坪<strong style="color: rgb(210, 54, 42)">山火复燃 </strong>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="left">8时许，涪陵区和南川区的山火明火已<strong style="color: rgb(62, 98, 101)">全部被扑灭</strong><br>
+14时43分许，大足区万古镇新石村所辖山林<strong style="color: rgb(210, 54, 42)">发生火灾</strong><span style="color: rgb(210, 54, 42)"><br>
+</span> 15时许，铜梁区永嘉镇圣水村、围龙镇龙韵村山林<strong style="color: rgb(210, 54, 42)">发生火灾 </strong></div>
+            <div class="center"><span>
+                8月20日
+            </span></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="box">
+            <div class="left"></div>
+            <div class="center"><span>
+                8月21日
+            </span></div>
+            <div class="right">15时42分许，开州区竹溪镇三升村<strong style="color: rgb(210, 54, 42)">发生山火</strong><br>
+17时许，巴南区界石镇新玉村所辖山林<strong style="color: rgb(210, 54, 42)">发生火灾</strong><br>
+22时30分许，北碚区歇马街道虎头村凹儿坪发生火情
+大足区山火燃烧<strong style="color: rgb(210, 54, 42)">一夜未灭 </strong></div>
+        </div>
+	
+        <div class="box">
+            <div class="left">7时30分，江津区支坪镇山火已<strong style="color: rgb(62, 98, 101)">全面扑灭</strong>，<strong>无人员伤亡</strong><br>
+9时15分许，开州区竹溪镇三升村火灾现场<span style="color: rgb(62, 98, 101)"><strong>明火均被扑灭，无人员伤亡</strong></span><br/>
+17时20分，奉节县安坪镇新铺村<span style="color: rgb(210, 54, 42)"><strong>突发山火</strong></span> </div>
+            <div class="center"><span>
+                8月22日
+            </span></div>
+            <div class="right"></div>
+        </div>
+<div class="box">
+            <div class="left"></div>
+            <div class="center"><span>
+                8月23日
+            </span></div>
+            <div class="right">3时30分，奉节县安坪镇新铺村山火明火<strong style="color: rgb(62, 98, 101)">已全部扑灭，无人员伤亡</strong><br>
+19时许，长寿区万顺镇垭口村曾家沟<strong style="color: rgb(210, 54, 42)">发生山火 </strong> </div>
+        </div>
+
+        <div class="box">
+            <div class="left">8时铜梁区永嘉镇森林火灾<strong style="color: rgb(62, 98, 101)">明火已扑灭</strong>，巴南区界石镇森林火灾南线明火<strong style="color: rgb(62, 98, 101)">已全部扑灭 </strong>
+
+            </div>
+            <div class="center"><span>
+                8月25日
+            </span></div>
+            <div class="right"></div>
+        </div>
+
+        <div class="box">
+            <div class="left"></div>
+            <div class="center"><span>
+                8月26日
+            </span></div>
+            <div class="right">1时42分许，长寿区山火明火<strong style="color: rgb(62, 98, 101)">已全部扑灭</strong><br>
+8月26日8时30分，重庆森林火灾各处<span style="color: rgb(62, 98, 101)"><strong>明火全部扑灭</strong></span>
+
+
+            </div>
+        </div>
+       
+		
+    </div>
+	
+	
+
+</body>
+</html>

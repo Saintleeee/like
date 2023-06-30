@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>主页</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <div class="logo">
+                <img src="../imageco/树叶i.png" />
+                
+            </div>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="../imageco/首页背景视频.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+           
+
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="../imageco/qq.png" alt=""></a></li>
+            <li><a href="#"><img src="../imageco/weixin.png" alt=""></a></li>
+            <li><a href="#"><img src="../imageco/weibo.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="引言.html">引言</a></li>
+			  <li><a href="50件“小事”.html">山火细节</a></li>
+            <li><a href="时间轴.html">山火历程</a></li>
+            <li><a href="图说故事.html">图说山火</a></li>
+             <li><a href="登陆.html">登陆/注册</a></li>
+
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
+	
+	
+</body>
+</html>

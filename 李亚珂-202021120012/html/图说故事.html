@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图说故事</title>
+    
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+   ></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+ 
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 100vh;
+    text-align: left;
+	overflow: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  flex-direction: column;
+	height: 100vh;
+
+}
+ 
+ button {
+ color: #090909;
+	 margin: 5px;
+ padding: 0.7em 1.7em;
+ font-size: 18px;
+ border-radius: 0.5em;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ transition: all .3s;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+	
+}
+
+
+  .custom-btn {
+	  position: relative;
+	 top:-600px;
+	 right: -20px;
+	 z-index: 99;
+ width: 130px;
+ height: 40px;
+ color: #fff;
+ border-radius: 5px;
+ padding: 10px 25px;
+ font-family: 'Lato', sans-serif;
+ font-weight: 500;
+ background: transparent;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ position: relative;
+ box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+ outline: none;
+}
+
+.btn {
+ background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+ line-height: 42px;
+ padding: 0;
+ border: none;
+}
+
+.btn span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+
+.btn:before,
+.btn:after {
+ position: absolute;
+ content: "";
+ right: 0;
+ bottom: 0;
+ background: rgba(251, 75, 2, 1);
+ box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+ transition: all 0.3s ease;
+}
+
+.btn:before {
+ height: 0%;
+ width: 2px;
+}
+
+.btn:after {
+ width: 0%;
+ height: 2px;
+}
+
+.btn:hover {
+ color: rgba(251, 75, 2, 1);
+ background: transparent;
+}
+
+.btn:hover:before {
+ height: 100%;
+}
+
+.btn:hover:after {
+ width: 100%;
+}
+
+.btn span:before,
+.btn span:after {
+ position: absolute;
+ content: "";
+ left: 0;
+ top: 0;
+ background: rgba(251, 75, 2, 1);
+ box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+ transition: all 0.3s ease;
+}
+
+.btn span:before {
+ width: 2px;
+ height: 0%;
+}
+
+.btn span:after {
+ height: 2px;
+ width: 0%;
+}
+
+.btn span:hover:before {
+ height: 100%;
+}
+
+.btn span:hover:after {
+ width: 100%;
+}     
+.timeline {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 25px 5px rgba(0, 0, 0, .2);
+}
+.timeline .swiper-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.timeline .swiper-wrapper {
+  transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+}
+.timeline .swiper-slide {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+    
+}
+.timeline .swiper-slide::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -115%;
+  bottom: -10%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  box-shadow: -230px 0 150px 60vw rgba(0, 0, 0, .7);
+  border-radius: 100%;
+}
+.timeline .swiper-slide-content {
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  max-width: 310px;
+  right: 50%;
+  top: 13%;
+  transform: translate(50%, 0);
+  font-size: 12px;
+  z-index: 2;
+}
+.timeline .swiper-slide .timeline-year {
+  display: block;  
+  font-size: 22px !important;
+  margin-bottom: 50px;
+  transform: translate3d(20px, 0, 0);
+  color: orange;
+    font-style: italic;
+  font-weight: 300;
+  opacity: 0;
+  transition: 0.2s ease 0.4s;
+}
+.timeline .swiper-slide .timeline-title {
+  font-weight: 800;
+  font-size: 54px !important;
+  margin: 0 0 30px;
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+  transition: 0.2s ease 0.5s;
+}
+.timeline .swiper-slide .timeline-text {
+  line-height: 1.8;
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+  transition: 0.2s ease 0.6s;
+    font-size: 14px;
+}
+.timeline .swiper-slide-active .timeline-year {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.4s ease 1.6s;
+     
+}
+.timeline .swiper-slide-active .timeline-title {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.4s ease 1.7s;
+}
+.timeline .swiper-slide-active .timeline-text {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.4s ease 1.8s;
+}
+.timeline .swiper-pagination {
+  right: 15% !important;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  z-index: 1;
+}
+.timeline .swiper-pagination::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, .2);
+}
+.timeline .swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  text-align: center;
+  opacity: 1;
+  background: transparent;
+  color: #d4a024;
+  margin: 15px 0 !important;
+  position: relative;
+}
+.timeline .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -32.5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #d4a024;
+  transform: scale(0);
+  transition: 0.2s;
+}
+.timeline .swiper-pagination-bullet-active {
+  color: #d4a024;
+}
+.timeline .swiper-pagination-bullet-active::before {
+  transform: scale(1);
+}
+.timeline .swiper-button-next, .timeline .swiper-button-prev {
+  background-size: 20px 20px;
+  top: 15%;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  z-index: 2;
+  transition: 0.2s;
+}
+.timeline .swiper-button-prev {
+  left: 8%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+}
+.timeline .swiper-button-prev:hover {
+  transform: translateX(-3px);
+}
+.timeline .swiper-button-next {
+  right: 8%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
+}
+.timeline .swiper-button-next:hover {
+  transform: translateX(3px);
+}
+@media screen and (min-width: 768px) {
+  .timeline .swiper-slide::after {
+    right: -30%;
+    bottom: -8%;
+    width: 240px;
+    height: 50%;
+    box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, .7);
+  }
+  .timeline .swiper-slide-content {
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 310px;
+    font-size: 11px;
+    text-align: right;
+  }
+  .timeline .swiper-slide .timeline-year {
+    margin-bottom: 0;
+    font-size: 32px;
+  }
+  .timeline .swiper-slide .timeline-title {
+    font-size: 46px;
+    margin: 0;
+  }
+  .timeline .swiper-pagination {
+    display: flex;
+  }
+  .timeline .swiper-button-prev {
+    top: 15%;
+    left: auto;
+    right: 15%;
+    transform: rotate(90deg) translate(0, 10px);
+  }
+  .timeline .swiper-button-prev:hover {
+    transform: rotate(90deg) translate(-3px, 10px);
+  }
+  .timeline .swiper-button-next {
+    top: auto;
+    bottom: 15%;
+    right: 15%;
+    transform: rotate(90deg) translate(0, 10px);
+  }
+  .timeline .swiper-button-next:hover {
+    transform: rotate(90deg) translate(3px, 10px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .timeline .swiper-slide::after {
+    right: -20%;
+    bottom: -12%;
+    width: 240px;
+    height: 50%;
+    box-shadow: -230px 0 150px 39vw rgba(0, 0, 0, .7);
+  }
+  .timeline .swiper-slide-content {
+    right: 25%;
+  }
+}
+	}
+
+			
+				
+	
+		
+    </style>
+    
+</head>
+	
+<body>
+
+    <div class="container">
+
+  <div class="timeline">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g1.jpg)" data-year="缙云山">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">缙云山  </h4>
+            <p class="timeline-text">重庆四面皆山，缙云山是李商隐“巴山夜雨涨秋池”中的“巴山”所指，是重庆中心城区的生态屏障，是重庆的肺叶。山中植被丰富，珍稀濒危植物繁多，有“植物物种基因库”的美誉，是国家级的自然保护区。它还是北碚区的灯塔和地标，是当地人们的母亲山。太平时节，住在城北老城的北碚人白天一开窗，就能望见山上的缙云塔。
+</p>
+          </div>
+        </div>
+		  
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g2.jpg)" data-year="山火来袭">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">山火来袭  </h4>
+            <p class="timeline-text">2022年夏天，川渝地区高温持续，北碚区是火炉的中心。从8月17日起，重庆各地陆续有山火发生，但规模都在可控范围内。8月21日22时，缙云山南部的支脉虎头山突发山火，大火伴随着高温以及岭谷地带的偏南风向，一路向北，往缙云山烧去。最大的一个火点燃向缙云山主峰。参与灭火的救援队员从500人增至1500人，但大火几次扑而复燃，一直烧到了朝阳中学后山，危及重庆人的后花园，情况危急。
+
+</p>
+          </div>
+        </div>
+		
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g3.jpg)" data-year="志愿汇集">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">志愿汇集  </h4>
+            <p class="timeline-text">缙云山起火后，重庆地区的微信群中开始转发招募志愿者的消息。成千上万的人们聚集在一起，向火山逆行。
+山上，救援人员昼夜鏖战，
+山下，志愿者们捐物资、运物资，保障前线的物资供应。　没有路，硬生生地踏出来，没有水，一桶桶地运上去，让在火海一线的消防员也能吃到冰棍，构筑起一条直达火情主战场的稳定补给线。
+
+</p>
+          </div>
+        </div>
+		  
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g4.jpg)" data-year="骑士精神">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">“骑士”精神  </h4>
+            <p class="timeline-text">由于山区地势陡峭不便通行，救援物资难以运上山，许多00后、90后骑着摩托车顶着40多度的高温不分昼夜往返奔波，将水、食物、药品、救援工具、工作人员搭载到山上。他们背着大背篓一趟又一趟往山上接力运送物资，这些“摩托骑士”中有专业摩托车手，也有来自周边的普通群众，还有一些上了年纪的人也赶来帮忙。
+“大家都在出自己的一份力”，由于山路陡峭，摩托车志愿者爬坡摔倒，
+越野车队便接力运送物资。一位志愿者说：
+“我们是一个接力赛
+全都在跟时间赛跑”
+
+</p>
+          </div>
+        </div>
+		  
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g5.jpg)" data-year="并肩作战">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">并肩作战 </h4>
+            <p class="timeline-text">扑灭此次山火离不开各方的并肩作战。其中川渝调配了侦察机、灭火机等设备投入扑火救援，加密直升机灭火作业频次、实施人工增雨作业。甘肃省森林消防总队重庆驻防队伍、云南省森林消防总队等纷纷派出救援力量。消防队伍、武警部队等加强空地协作。西部战区陆军某旅也派出队伍星夜驰援。火场上，并肩奋战的“火焰蓝”与“橄榄绿”互相敬礼、点赞。
+
+</p>
+          </div>
+        </div>
+		  
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g6.jpg)" data-year="防火“长城”">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">防火“长城”  </h4>
+            <p class="timeline-text">25日晚重庆北碚缙云山山火决战现场，一边是肆虐的山火，一边是救援人员头灯的微光。火线和灯光形成了鲜明的对比，原本那里没有路，原本那里也没有灯，崎岖陡峭的山路上，在伸手不见五指的深夜里，无数人头顶上的照明灯连成了“防火长城”。
+
+</p>
+          </div>
+        </div>
+		  
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g7.jpg)" data-year="胜利曙光">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">胜利曙光  </h4>
+            <p class="timeline-text">向漫天山火逆行，守住了万家灯火。截至8月26日8时30分，重庆森林火灾各处明火已全部扑灭，全面转入清理看守阶段。与山火斗争的人们在山上看到了日出。此次扑灭山火，各方面累计投入各级各类救援力量1.4万余人、森林灭火主战装备3100余（套）、直升机10架参与重庆森林火灾扑救，及时转移群众680余户、1800余人。
+
+</p>
+          </div>
+        </div>
+		  
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g8.jpg)" data-year="夹道相送">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">夹道相送  </h4>
+            <p class="timeline-text">8月26日，重庆全市山火明火被扑灭，在消防人员离开时，重庆市民自发欢逆行火海的灭火英雄。道路两侧，站满了当地居民，大家拉着横幅、敲锣打鼓，拿着火锅底料、鸡蛋等土特产
+上街欢送。
+
+</p>
+          </div>
+        </div>
+		  
+		     <div class="swiper-slide" style="background-image: url(../imageco/图说故事/g9.jpg)" data-year="重焕生机">
+          <div class="swiper-slide-content">
+            <h4 class="timeline-title">重焕生机  </h4>
+            <p class="timeline-text">这是山火后的缙云山。重庆山火结束后，不少志愿者相约要在在2023的春天来缙云山种树，重建绿色。“春天要到了，相信一切都会好起来的！”
+
+</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+<script>
+    $(function(){
+   
+var timelineSwiper = new Swiper ('.timeline .swiper-container', {
+  direction: 'vertical',
+  loop: false,
+  speed: 1600,
+  pagination: '.swiper-pagination',
+  paginationBulletRender: function (swiper, index, className) {
+    var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+    return '<span class="' + className + '">' + year + '</span>';
+  },
+  paginationClickable: true,
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  breakpoints: {
+    768: {
+      direction: 'horizontal',
+    }
+  }
+});    
+    
+             
+    });
+</script>
+<a href="主页菜单.html">	
+<button class="custom-btn btn"><span>返回主页</span>
+			</button>	
+	</a>
+</body>
+</html>

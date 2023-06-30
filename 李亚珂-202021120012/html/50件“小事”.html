@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>细节</title>
+    <style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+        body {
+    background-color: rgb(#000);
+    font-size: 50px;
+    color: #E3D0D0;
+    text-align: center;
+			overflow: hidden;
+        }
+		@font-face{
+			font-family:"fangz";
+			src:url("font/PangMenZhengDaoCuShuTi-2.ttf")
+		}
+		.zhuti{
+			height: 90vh;
+			width:210vh;
+			background-color:#3E6265;
+			
+		}
+
+        span {
+            user-select: none;
+            cursor: default;
+            font-size: 20px;
+            color:#fff;
+            position: absolute;
+            transition: 1s;
+			font-family: "fangz"
+        }
+
+		.buchong h4{
+    font-size: 30px;
+    padding-top: 10px;
+    color: #07423E;
+		}
+		.buchong p{
+    font-size: 18px;
+    color: #0C4B55;
+		}
+		.nav{
+			display: flex;
+			font-size: 20px;
+			align-items: center;
+			justify-content: center;
+			margin: 10px 10px;
+
+		}
+		
+		.back{
+			font-size: 16px;
+			margin: 10px 100px;
+			text-decoration: none;
+			list-style: none;
+		}
+		
+		.back {
+  position: relative;
+  font-size: 1em;
+  padding: 0.4em 1em;
+  background-color: #3E6265;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: #3E6265;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+.back::before {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.back:hover::before {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.back:active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.1em, 0.1em);
+}
+
+	
+
+　
+		
+    </style>
+</head>
+
+<body>
+
+<div class="zhuti">
+		<div class="buchong">
+   <h4>山火中的细节</h4>
+	<p>(随意点击鼠标查看)</p></span></div>
+    <script>
+        var arr = ["有志愿者打算带两箱矿泉水，结果到了发现大家都是这么想的，现场的矿泉水堆成小山。","有出租车司机拒收志愿者车费，去火场和撤离火场的志愿者，都有遇到拒收车费的。","火场有一处树梢还有明火，有人直接爬上树，把着火的树杈扯下来。","每走一段路，就会有一个由物资堆成的营地。营地里有各种各样的水，甚至还有冰水。这些冰，都是摩托车手一趟一趟背过来的。","前线人员说上面太热了，矿泉水都烫，就有重庆市民想办法送上去三箱老冰棍和大冰砖。久经火场的消防队员也被震惊到。","救火和支援的志愿者，有男人、有女人，有老人、有年轻人，有重庆人、有来自全国各地的人，也有外国人……","志愿者中有一位西南大学的美籍副教授，他说他会用油锯，有经验，看到召唤就来了，和大家一起组装了50台油锯送上山。他说，重庆也是他的家。","一位开餐饮的女老板给灭火救援队的小伙子们送饭，在厨房不断吆喝“肉多装点，肉多装点”。","有外卖小哥骑着踏板摩托车来当志愿者，送外卖的后备箱都没来得及拆。","上山的路非常难走，有些陡坡接近70°，大家手脚并用往上爬。有志愿者调侃，自己以前可是拿快递都不愿下楼的那种人。","“摩托大军”大部分都是“00后”和“90后”。","一个22岁小伙两天两夜运送物资支援灭火，累得趴在车上呕吐，为了保持清醒，他用水浇头。","数十个小时连轴消耗，有骑手的摩托车几乎报废，爱车如命的他心疼，但又觉得它完成了自己的使命。","带着冰水和食物的志愿者，上山一路上收获了数不过来的“谢谢”和“注意安全”。","一位00后摩托车志愿者3天4夜只睡了16个小时，当被夸“重庆崽儿特别棒”时，他说，“这句话就像给我打了鸡血一样”。","一位大一新生先后参与涪陵区、南川区三场山火的救援，这对刚成年不久的他来说是一段特殊而难忘的经历。","有10余名中学毕业生的任务是熬整个通宵地巡山，这群朝气蓬勃的“后”自称“夜间小分队”，因为精力太好睡不着，“需要打起精神”的工作正合适。","下山时，有骑摩托车的志愿者摔了，起初的“热血上头”被理智驯服，“我少装点，多跑两趟，尽量别把自己弄伤了，免得给别人添麻烦。”","“我空闲时会去山上看日出，风景很好，如果烧掉就可惜了。”","被告知“女娃儿就不要上去了”，这个“女娃儿”就换了一个点，“把头盔戴起，头发藏起，最后终于让我拉物资了！”","志愿者特别多，需要运的物资有限，他们争先恐后地像小学生一样大喊“选我选我！”","“我来，我是党员！”“我当过兵”“我08年救过灾”“我是老师……”","有志愿者明明跑了十几趟，为多出一份力，硬说自己只跑了一趟。","凌晨三点，一位辛苦了一天的志愿者发了一个朋友圈，配了几张山火现场拍摄的照片，“因为这个时间我的父母已经睡觉了。","“现场没有人看热闹。”","志愿者们从各地自发奔赴而来，每个人都不知道对方的名字，大家就都互叫“老师”，这是重庆人对陌生人的尊称。","一位武汉大哥专门驱车为一线救援人员运送矿泉水，他说，“我们武汉有句话叫‘还情’！”","一位骑手来自四川南充，“川渝一家亲，我们不说两家话”。","有几位在重庆生活10多年的新疆人，不仅支援灭火，还给救援人员送去了自己做的馕。","参与山火扑救任务的灭火人员下山休息，一位岁的老婆婆深夜为大家煮粥，一直忙到凌晨两点多。","一位68岁的林长，衣服挂烂了几身，黢黑着脸到家后，总是匆匆刨两口饭又返回山里。他的妻子一直在救援点等他。","眼看“家门口”有难，北碚的西南大学师生自发参与志愿服务，有老师加入“摩托大军”。也有副教授帮忙挖隔离带。","25日晚，“雄起”的声音响彻缙云山巅。","救火那几天，重庆的气温居高不下，每天的最高温度都超过40摄氏度。","00后消防员成薛文直言，自己很紧张，也害怕，但“怎么退嘛，背后就是一个养鸡场，还有几栋民房，里面有几百只鸡，还有几个居民。”","奔赴重庆支援的森林消防人员包括云南736人，四川228人，甘肃94人。","专业的云南森林消防抵达现场后，进行了初步勘探，一起唱了支军歌后，就冲进了火场。","消防员们片刻的休息都得轮换着来，脸被高温烤得通红，汗如雨下，只能匆匆往脸上泼些水降温。","有志愿者准备买一箱藿香正气水上山，却被告知药店老板已经捐了一卡车","有志愿者帮一位消防员找到了走散的队友，辛苦了多日的消防员感激地朝志愿者鞠了一躬，志愿者再也忍不住泪水，也向他们深深鞠了一躬。","休息期间，与山火搏斗了十几个小时的救援人员和衣而卧，倒头就睡。有人睡在滚烫的地面上，有人睡在山林中。有人吃着面包就睡着了。","袁如洪、袁欣父子均为救援队员，袁如洪用带着重庆口音的普通话表示“(自己)三天三夜没合眼了”“我娃娃在巴南那边打火”“没办法关心”。","“消防员救完火出来，大家就往他们身上倒水，水蒸气就冒出来，看了很心疼。”","“摩托大军”上山时送去食物和水，下山时则捎上消防员。网友说这是山火救援现场最热血的组合。","重庆北碚缙云山明火被扑灭。救援人员在现场欢呼呐喊：“胜利啦！”","26日，在缙云山上战斗了一夜的武警消防官兵和志愿者欣赏到了绝美的日出朝霞。","云南消防官兵完成任务要离开时，被重庆老百姓围住车，大喊“开门、开门、不开门走不脱了”。大家从车窗缝隙中扔各种土特产给他们。网友：没端火锅是最后的克制。","云南省森林消防总队消防员，人还没回去，来自重庆的锦旗就送到昆明了。锦旗上写着：“王牌之师驰援山城 赴汤蹈火竭诚为民”。","截至2022年8月26日8时30分，经各方共同努力，重庆森林火灾各处明火已全部扑灭，全面转入清理看守阶段，无人员伤亡和重要设施损失。","“开春一起去种树吧！”大火扑灭后，志愿者们继续上山清理垃圾，为植树做准备。青山重现，指日可待。",]
+        document.onclick = function (x) {
+            // 创建元素节点对象
+            var span = document.createElement("span")
+            // 获取当前鼠标的坐标
+            span.style.left = x.clientX + "px"
+            span.style.top = x.clientY + "px"
+            // 让span的值为arr数组内随机的一个值
+            span.innerHTML = arr[Math.floor(Math.random() * arr.length)]
+            // 设置span的动画效果（这里可以自行）
+            setTimeout(function () {
+                span.style.opacity = "1"
+                span.style.transform = "translateY(-100px)"
+            }, 100)
+            setTimeout(function () {
+                span.style.opacity = "0.2"
+                span.style.transform = "translateY(-230px)"
+            }, 1500)
+            // 最后一步是清掉opacirt为0的span
+            setTimeout(function () {
+                var chi = document.getElementsByTagName("span")
+                for (var i = 0; i < chi.length; i++) {
+                    if (chi[i].style.opacity == "0") {
+                        document.body.removeChild(chi[i])
+                    }
+                }
+            }, 1000)
+            // 将span添加到body里
+            document.body.appendChild(span)
+        }
+
+    </script>
+</div>
+	
+<div class="nav">  
+	
+	
+	<div class="back"><a href="主页菜单.html" style="text-decoration: none; color: #F9F9F9;font-family: fangz">返回首页</a></div>
+	<div class="back"><a href="时间轴.html" style="text-decoration: none; color: #F9F9F9;font-family: fangz">山火历程</a></div>
+	<div class="back"><a href="图说故事.html" style="text-decoration: none; color: #F9F9F9;font-family: fangz">图说山火</a></div>
+	<div class="back"><a href="引言.html" style="text-decoration: none; color: #F9F9F9;font-family: fangz">返回引言</a></div>
+	
+	</div>
+</body>
+
+</html>
